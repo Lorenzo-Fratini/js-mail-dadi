@@ -3,34 +3,36 @@
 //
 // var enter = prompt('enter your email');
 //
+// var result;
+//
 // for (var i = 0; i < arr.length; i++){
 //
 //   if (enter == arr[i]){
-//     var result = 'Autenticazione riuscita';
+//     result = 'Autenticazione riuscita';
 //     break;
 //   } else{
-//     var result = 'Autenticazione non riuscita';
+//     result = 'Autenticazione non riuscita';
 //   }
 // }
 //
 // document.getElementById('result').innerHTML =  result;
 
+
 // Gioco dei dadi
 var min = 1;
-var max = 6 - min;
+var max = 6;
 
 var rndUser = Math.floor(Math.random() * max) + min;
-console.log('rndUser', rndUser);
-
 var rndCom = Math.floor(Math.random() * max) + min;
-console.log('rndCom', rndCom);
+
+var result;
 
 if (rndUser > rndCom){
-    result="Hai vinto!"
+   result="Hai vinto!";
 } else if (rndUser < rndCom){
-    result="Hai perso..."
+   result="Hai perso...";
 } else{
-    result="Hai pareggiato."
+   result="Hai pareggiato.";
 }
 
 document.getElementById('result').innerHTML =  result;
